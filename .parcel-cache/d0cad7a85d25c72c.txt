@@ -20,7 +20,7 @@
 86C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\chrome-trace-event133177391514104691 1
 118C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\posthtml-include\node_modules\posthtml-parser\dist133177391514489701 1
 68C:\Users\Admin\Documents\GitHub\team-project_cocktails\.editorconfig133177334780508458 0
-65C:\Users\Admin\Documents\GitHub\team-project_cocktails\.gitignore133177334780614103 0
+65C:\Users\Admin\Documents\GitHub\team-project_cocktails\.gitignore133177448144530810 0
 102C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\axios\lib\platform\browser\classes133177391522809259 1
 98C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\@parcel\runtime-service-worker133177391511751505 1
 83C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\reusify\LICENSE133177391511322325 0
@@ -106,7 +106,7 @@
 98C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\nth-check\lib\compile.d.ts.map133177391515598542 0
 96C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\sass\types\logger\index.d.ts133177391523482547 0
 98C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\yaml\dist\Document-9b4560a1.js133177391512610481 0
-72C:\Users\Admin\Documents\GitHub\team-project_cocktails\package-lock.json133177434693160465 0
+72C:\Users\Admin\Documents\GitHub\team-project_cocktails\package-lock.json133177447654745646 0
 92C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\fast-glob\out\index.d.ts133177391520752306 0
 99C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\caniuse-lite\data\regions\BI.js133177394261821746 0
 110C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\caniuse-lite\data\features\css3-tabsize.js133177394267739452 0
@@ -3049,7 +3049,7 @@
 86C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\get-port\readme.md133177391512396546 0
 81C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\@parcel\cache133177391517061008 1
 89C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\@parcel\optimizer-css133177391511751505 1
-83C:\Users\Admin\Documents\GitHub\team-project_cocktails\.github\workflows\deploy.yml133177334781865797 0
+83C:\Users\Admin\Documents\GitHub\team-project_cocktails\.github\workflows\deploy.yml133177438004296811 0
 87C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\form-data\Readme.md133177391514104691 0
 91C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\form-data\README.md.bak133177391509112318 0
 112C:\Users\Admin\Documents\GitHub\team-project_cocktails\node_modules\@parcel\workers\src\process\ProcessWorker.js133177391519501132 0

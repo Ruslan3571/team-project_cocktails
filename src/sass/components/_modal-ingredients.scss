@@ -1,0 +1,158 @@
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  width: 100%;
+}
+
+.modal-ingridients__body {
+  position: relative;
+  background-color: $primary-white-color;
+  width: 100%;
+  padding: 40px 20px;
+  @media screen and(min-width: $tablet) {
+    padding: 40px 28px 28px;
+  }
+}
+
+.icon-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  display: flex;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  fill: #202025;
+}
+
+.icon-close:hover,
+.icon-close:focus {
+  fill: $primary-color;
+}
+
+.modal__header {
+  width: auto;
+  margin-bottom: 20px;
+
+  font-family: $roboto-family;
+  font-weight: $roboto-font-700;
+  font-size: 32px;
+  line-height: 1.18;
+
+  color: $primary-color;
+}
+
+.alcohol-type {
+  position: relative;
+  margin-bottom: 68px;
+
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+  text-transform: uppercase;
+
+  color: $primary-color;
+
+  @media screen and (min-width: $tablet) {
+    &::after {
+      content: ' ';
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+      background: $primary-text-color;
+    }
+  }
+}
+
+.alcohol-type-text {
+  margin-bottom: 30px;
+
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: $primary-color;
+}
+
+.descr-list {
+  margin-bottom: 32px;
+}
+
+.descr-list__item {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: $primary-color;
+}
+.ingredients-list__link {
+}
+
+.modal__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: 0;
+  width: fit-content;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+
+  @media screen and(min-width: $tablet) {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  outline: none;
+
+  background-color: $primary-button-color;
+  color: $primary-white-color;
+}
+
+.add__btn {
+  width: 185px;
+  height: 48px;
+}
+.remove__btn {
+  width: 248px;
+  height: 48px;
+}

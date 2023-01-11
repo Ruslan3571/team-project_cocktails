@@ -4,7 +4,7 @@
   "description": "",
   "homepage": "https://Ruslan3571.github.io/team-project_cocktails",
   "scripts": {
-    "start": "parcel src/*.html",
+    "start": "parcel src/*.html --open",
     "build": "parcel build src/*.html --public-url /team-project_cocktails/"
   },
   "repository": {

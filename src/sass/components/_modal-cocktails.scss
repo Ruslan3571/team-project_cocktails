@@ -31,11 +31,16 @@
   position: relative;
   background-color: $primary-white-color;
   padding: 40px 20px;
-  margin: 75px 45px;
+  margin: auto;
+  width: 100%;
+  @media screen and (min-width: $tablet) {
+    padding: 0px 28px 28px 0px;
+    max-width: 820px;
+  }
 }
 
 .modal-mobile__body {
-  width: 100%;
+  // width: 100%;
   @media screen and (min-width: $tablet) {
     display: none;
   }
@@ -44,7 +49,8 @@
 .modal-tablet__body {
   display: none;
   @media screen and (min-width: $tablet) {
-    height: 600px;
+    // height: 600px;
+    // max-width: 822px;
     display: block;
   }
 }
@@ -68,12 +74,12 @@
   height: 32px;
   background-color: $primary-white-color;
   border: none;
-  fill: #202025;
+  cursor: pointer;
 }
 
 .icon-close:hover,
 .icon-close:focus {
-  fill: $primary-color;
+  fill: $primary-white-color;
 }
 
 .modal__header {
@@ -81,13 +87,14 @@
   margin-bottom: 20px;
 
   font-family: $roboto-family;
-  font-weight: $roboto-font-700;
+  font-weight: 900;
   font-size: 32px;
   line-height: 1.18;
 
   color: $primary-color;
   @media screen and (min-width: $tablet) {
     font-weight: $roboto-font-700;
+    margin-top: 40px;
   }
 }
 
@@ -105,6 +112,7 @@
   @media screen and (min-width: $tablet) {
     margin-top: 28px;
     margin-bottom: 24px;
+    margin-left: 28px;
   }
 }
 .instruction-text {
@@ -118,6 +126,7 @@
   color: $primary-color;
   @media screen and (min-width: $tablet) {
     margin-bottom: 40px;
+    margin-left: 28px;
   }
 }
 

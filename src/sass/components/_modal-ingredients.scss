@@ -4,29 +4,6 @@
   visibility: hidden;
 }
 
-.backdrop {
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.modal {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  width: 100%;
-}
-
 .modal-ingridients__body {
   position: relative;
   background-color: $primary-white-color;
@@ -37,19 +14,19 @@
   }
 }
 
-.icon-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+// .icon-close {
+//   position: absolute;
+//   top: 16px;
+//   right: 16px;
 
-  display: flex;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-  background-color: transparent;
-  border: none;
-  fill: #202025;
-}
+//   display: flex;
+//   align-items: center;
+//   width: 32px;
+//   height: 32px;
+//   background-color: black;
+//   border: none;
+//   fill: #202025;
+// }
 
 .icon-close:hover,
 .icon-close:focus {
@@ -61,7 +38,7 @@
   margin-bottom: 20px;
 
   font-family: $roboto-family;
-  font-weight: $roboto-font-700;
+  font-weight: 900;
   font-size: 32px;
   line-height: 1.18;
 
@@ -146,13 +123,4 @@
 
   background-color: $primary-button-color;
   color: $primary-white-color;
-}
-
-.add__btn {
-  width: 185px;
-  height: 48px;
-}
-.remove__btn {
-  width: 248px;
-  height: 48px;
 }

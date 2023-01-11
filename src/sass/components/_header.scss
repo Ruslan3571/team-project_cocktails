@@ -17,7 +17,7 @@
   width: 100%;
   height: 100vh;
   padding: 20px;
-  background-color: white;
+  background-color: $primary-white-color;
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
@@ -25,72 +25,64 @@
 
 .nav__link {
   font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 28px;
-line-height: 24px;
-letter-spacing: 0.02em;
-color: #000000;
-text-transform: uppercase;
-&:hover{
-  color:#FD5103 ;
-
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: $primary-color;
+  text-transform: uppercase;
+  &:hover {
+    color: #fd5103;
+  }
 }
-}
 
-.nav__item:not(:last-child){
+.nav__item:not(:last-child) {
   margin-bottom: 30px;
 }
 
-.nav__item:last-child:hover .dropdowm__list{
+.nav__item:last-child:hover .dropdowm__list {
   display: block;
-  color:#FD5103 ;
+  color: #fd5103;
 }
-.dropdown-icon:hover .dropdowm__list{
+.dropdown-icon:hover .dropdowm__list {
   display: block;
- 
-  
 }
 
-.dropdowm__list{
+.dropdowm__list {
   display: none;
-  background-color: #FCFCFC;
-  color:#000000;
+  background-color: #fcfcfc;
+  color: #000000;
 
   position: absolute;
- 
+
   min-width: 210px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   //border: 1px solid $main-orange;
   border-radius: 5px;
   z-index: 1;
- 
 }
 
 .dropdowm__link {
   min-width: inherit;
   font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 24px;
-letter-spacing: 0.02em;
-
-
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
 }
 .dropdown__item {
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   padding: 12px;
   color: #000000;
-  &:hover{
-    background-color:#FD5103 ;
-    color: #FCFCFC;
-  
+  &:hover {
+    background-color: #fd5103;
+    color: #fcfcfc;
   }
 }
 
-
-.header-switch{
+.header-switch {
   display: flex;
   align-content: center;
   align-items: center;
@@ -102,8 +94,8 @@ letter-spacing: 0.02em;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1,71px;
-  color: #FD5103;
+  line-height: 1, 71px;
+  color: #fd5103;
 }
 
 .header-dark {
@@ -111,21 +103,21 @@ letter-spacing: 0.02em;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1,71px;
-  color: #15141D;
+  line-height: 1, 71px;
+  color: #15141d;
 }
 
 .switch {
   margin: 0 8px;
-  border: 1px solid #FD5103;
-border-radius: 20px;
-background-color: #FFFFFF;
-width: 40px;
-height: 16px;
+  border: 1px solid #fd5103;
+  border-radius: 20px;
+  background-color: #ffffff;
+  width: 40px;
+  height: 16px;
 
-& input {
-  display: none;
-}
+  & input {
+    display: none;
+  }
 }
 
 .slider {
@@ -133,21 +125,21 @@ height: 16px;
   overflow: hidden;
   width: 12px;
   height: 12px;
-  background-color: #FD5103;
+  background-color: #fd5103;
   border-radius: 30px;
-  border: 1px solid #FD5103;
+  border: 1px solid #fd5103;
   cursor: pointer;
-  &::after{
+  &::after {
     content: '';
     border-radius: 20px;
-    border: 1px solid #FD5103;
+    border: 1px solid #fd5103;
     width: 12px;
     position: absolute;
   }
 }
 
 input:checked + .slider {
-  background-color: #FD5103;
+  background-color: #fd5103;
   transform: translateX(28px);
 }
 
@@ -161,26 +153,26 @@ input:checked + .slider {
 }
 
 .btn-search {
-padding:10px;
-background-color: transparent;
-border: 1px solid #FD5103;
-border-radius: 4px 0 0 4px;
-width: 40px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #fd5103;
+  border-radius: 4px 0 0 4px;
+  width: 40px;
   height: 40px;
   cursor: pointer;
 }
 
 .search-text {
   border-radius: 0px 4px 4px 0px;
-  border: 1px solid #FD5103;
+  border: 1px solid #fd5103;
   height: 40px;
   font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-padding: 8px;
-width: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 8px;
+  width: inherit;
 }
 
 .tablet {
@@ -188,15 +180,15 @@ width: inherit;
 }
 
 .nav-btn {
-border: none;
-padding: 0;
-background-color: transparent;
-z-index: 3;
-@media screen and(min-width: $desktop){
-  display: none;
-} 
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  z-index: 3;
+  @media screen and(min-width: $desktop) {
+    display: none;
+  }
 }
 
 .is-open {
-right: 0;
-};
+  right: 0;
+}

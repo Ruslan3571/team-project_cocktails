@@ -1,23 +1,23 @@
-// let darkMode = localStorage.getItem('darkMode');
-// const darkModeToggle = document.querySelector('.switch');
+let darkMode = localStorage.getItem('darkMode');
+const darkModeToggle = document.querySelector('.switch');
 
-// const enabledDarkMode = () => {
-//   document.body.classList.add('dark-mode');
-//   localStorage.setItem('darkMode', 'enabled');
-// };
+const enabledDarkMode = () => {
+  document.body.classList.add('dark-mode');
+  localStorage.setItem('darkMode', 'enabled');
+};
 
-// const disabledDarkMode = () => {
-//   document.body.classList.remove('dark-mode');
-//   localStorage.setItem('darkMode', null);
-// };
+const disabledDarkMode = () => {
+  document.body.classList.remove('dark-mode');
+  localStorage.setItem('darkMode', null);
+};
 
-// disabledDarkMode();
+disabledDarkMode();
 
-// darkModeToggle.addEventListener('change', () => {
-//   darkMode = localStorage.getItem('darkMode');
-//   if (darkMode !== 'enabled') {
-//     enabledDarkMode();
-//   } else {
-//     disabledDarkMode();
-//   }
-// });
+darkModeToggle.addEventListener('change', () => {
+  darkMode = localStorage.getItem('darkMode');
+  if (darkMode !== 'enabled') {
+    enabledDarkMode();
+  } else {
+    disabledDarkMode();
+  }
+});

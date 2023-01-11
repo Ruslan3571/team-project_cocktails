@@ -19,7 +19,7 @@
     align-items: center;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     margin-top: 60px;
   }
 }
@@ -36,7 +36,7 @@
   margin-right: 18px;
   margin-left: 32px;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     margin-right: 38px;
     margin-left: 16px;
   }
@@ -46,7 +46,7 @@
   width: 368px;
   height: 329px;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     width: 549px;
     height: 492px;
   }
@@ -59,7 +59,7 @@
     margin-bottom: 40px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     max-width: 688px;
   }
 }
@@ -76,7 +76,7 @@
     line-height: 1.62;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     font-size: 52px;
     line-height: 1.54;
   }
@@ -110,7 +110,7 @@
     margin-bottom: 40px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     font-size: 18px;
     line-height: 1.56;
   }
@@ -124,7 +124,7 @@
     width: 324px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     width: 520px;
   }
 }
@@ -137,7 +137,7 @@
   gap: 16px;
   margin-bottom: 12px;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     margin-bottom: 15px;
     gap: 24px;
   }
@@ -148,7 +148,7 @@
   display: flex;
   gap: 18px;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     margin-left: 45px;
     gap: 28px;
   }
@@ -161,7 +161,7 @@
   line-height: 1.5;
   color: $secondary-text-color;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     font-size: 24px;
     line-height: 1.5;
   }

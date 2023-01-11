@@ -33,6 +33,7 @@ button {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -45,6 +46,7 @@ input {
 }
 
 .container {
+  padding: 0 20px;
   max-width: 480px;
   margin: 0 auto;
 
@@ -52,8 +54,9 @@ input {
     max-width: 768px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     max-width: 1280px;
+    padding: 0 16px;
   }
 }
 

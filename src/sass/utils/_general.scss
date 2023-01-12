@@ -1,6 +1,6 @@
 body {
-  font-family: var(--poppins-family);
-  color: var(--main-color);
+  font-family: $poppins-family;
+  color: $primary-white-color;
   margin: 0;
 }
 
@@ -62,7 +62,3 @@ input {
     padding: 0 16px;
   }
 }
-
-
-
-

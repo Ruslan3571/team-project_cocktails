@@ -8,3 +8,6 @@ import {
   searchIngredientsByName,
   searchIngredientsById,
 } from './js/ApiServise';
+import heroSearch from './js/hero-search';
+import mobileMenu from './js/mobileMenu';
+import changeTheme from './js/changeTheme';

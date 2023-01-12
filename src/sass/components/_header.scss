@@ -70,12 +70,14 @@
   letter-spacing: 0.02em;
   color: $primary-color;
 
+
   &:hover {
     color: #fd5103;
   }
   @media screen and(min-width: $desktop) {
     font-size: 18px;
   }
+
 }
 
 .nav__item:not(:last-child) {
@@ -90,12 +92,14 @@
   display: block;
   color: #fd5103;
 }
+
 .dropdown-icon {
   &:hover .dropdowm__list {
     display: block;
   }
   @media screen and(min-width: $desktop) {
   }display: none;
+
 }
 
 .dropdowm__list {
@@ -126,6 +130,8 @@
   padding: 12px;
   color: #000000;
 
+
+
   &:hover {
     background-color: #fd5103;
     color: #fcfcfc;
@@ -133,7 +139,9 @@
 }
 
 .header-switch {
+
   margin-top: 7px;
+
   display: flex;
   align-content: center;
   align-items: center;
@@ -170,7 +178,9 @@
   background-color: #ffffff;
   width: 40px;
   height: 16px;
+
   box-shadow: 0 0 0 2px #fd5103, 0 0 4px #fd5103;
+
 
   & input {
     display: none;
@@ -258,7 +268,9 @@ input:checked + .slider {
   padding: 0;
   background-color: transparent;
   z-index: 3;
+
   @media screen and(min-width:$desktop) {
+
     display: none;
   }
 }

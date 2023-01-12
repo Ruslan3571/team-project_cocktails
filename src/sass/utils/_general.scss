@@ -1,7 +1,8 @@
 body {
-  font-family: var(--poppins-family);
-  color: var(--main-color);
+  font-family: $poppins-family;
+  color: $primary-white-color;
   margin: 0;
+  overflow-x: hidden;
 }
 
 ul,
@@ -33,11 +34,14 @@ button {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
   outline: none;
   text-decoration: none;
+cursor: pointer;
+  color: inherit;
 }
 
 input {
@@ -45,18 +49,17 @@ input {
 }
 
 .container {
+  padding: 0 20px;
   max-width: 480px;
   margin: 0 auto;
 
   @media screen and (min-width: $tablet) {
     max-width: 768px;
+    padding: 0 32px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     max-width: 1280px;
+    padding: 0 16px;
   }
 }
-
-
-
-

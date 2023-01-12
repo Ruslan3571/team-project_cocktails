@@ -8,9 +8,11 @@
   position: relative;
   background-color: $primary-white-color;
   width: 100%;
+  margin: 75px 45px;
   padding: 40px 20px;
   @media screen and(min-width: $tablet) {
     padding: 40px 28px 28px;
+    max-width: 820px;
   }
 }
 

@@ -42,7 +42,11 @@ const createModalMarkup = function (drinks) {
   modalContentMobile.insertAdjacentHTML('afterbegin', markup);
 };
 
-searchCocktailById(11007).then(({ drinks }) => createModalMarkup(drinks));
+export function showModalWithCocktailDetailsMobile(cocktailId) {
+  return searchCocktailById(cocktailId).then(({ drinks }) =>
+    createModalMarkup(drinks)
+  );
+}
 
 const createModalMarkupTablet = function (drinks) {
   console.log(drinks);
@@ -72,4 +76,11 @@ const createModalMarkupTablet = function (drinks) {
   modalContentTablet.insertAdjacentHTML('afterbegin', markup);
 };
 
-searchCocktailById(11007).then(({ drinks }) => createModalMarkupTablet(drinks));
+export function showModalWithCocktailDetailsTablet(cocktailId) {
+  return searchCocktailById(cocktailId).then(({ drinks }) =>
+    createModalMarkupTablet(drinks)
+  );
+}
+
+showModalWithCocktailDetailsTablet(11007);
+showModalWithCocktailDetailsMobile(11007);

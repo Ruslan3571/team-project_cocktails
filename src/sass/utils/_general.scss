@@ -1,7 +1,8 @@
 body {
   font-family: $poppins-family;
-  color: $primary-white-color;
+  background-color: $primary-white-color;
   margin: 0;
+  overflow-x: hidden;
 }
 
 ul,

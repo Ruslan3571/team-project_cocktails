@@ -1,12 +1,30 @@
 .header {
   padding: 20px 0;
   position: relative;
+  background-color: $primary-white-color;
+  @media screen and(min-width: $desktop) {
+    position: static;
+  }
+}
+.header-logo {
+  @media screen and(min-width: $tablet) {
+    z-index: 3;
+  }
+  @media screen and(min-width: $desktop) {
+    margin-right: 43px;
+  }
 }
 
 .flex-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and(min-width: $tablet) {
+    align-items: flex-end;
+  }
+  @media screen and(min-width: $desktop) {
+    align-items: center;
+  }
 }
 
 .nav-wrapper {
@@ -21,6 +39,26 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
+  transition: right 0.5s linear;
+  @media screen and(min-width: $tablet) {
+    align-items: center;
+  }
+  @media screen and(min-width: $desktop) {
+    position: static;
+    padding: 0px;
+    flex-direction: row;
+    height: 100%;
+    // justify-content: center;
+  }
+}
+.nav__list {
+  @media screen and(min-width:$tablet) {
+    margin-top: 51px;
+  }
+  @media screen and(min-width: $desktop) {
+    margin-top: 0px;
+    display: flex;
+  }
 }
 
 .nav__link {
@@ -31,22 +69,37 @@
   line-height: 24px;
   letter-spacing: 0.02em;
   color: $primary-color;
-  text-transform: uppercase;
+
+
   &:hover {
     color: #fd5103;
   }
+  @media screen and(min-width: $desktop) {
+    font-size: 18px;
+  }
+
 }
 
 .nav__item:not(:last-child) {
   margin-bottom: 30px;
+  @media screen and(min-width: $desktop) {
+    margin-bottom: 0px;
+    margin-right: 60px;
+  }
 }
 
 .nav__item:last-child:hover .dropdowm__list {
   display: block;
   color: #fd5103;
 }
-.dropdown-icon:hover .dropdowm__list {
-  display: block;
+
+.dropdown-icon {
+  &:hover .dropdowm__list {
+    display: block;
+  }
+  @media screen and(min-width: $desktop) {
+  }display: none;
+
 }
 
 .dropdowm__list {
@@ -76,6 +129,9 @@
   background-color: #fcfcfc;
   padding: 12px;
   color: #000000;
+
+
+
   &:hover {
     background-color: #fd5103;
     color: #fcfcfc;
@@ -83,10 +139,17 @@
 }
 
 .header-switch {
+
+  margin-top: 7px;
+
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: flex-start;
+  @media screen and(min-width: $tablet) {
+    justify-content: center;
+    margin-top: 0px;
+  }
 }
 
 .header-light {
@@ -108,12 +171,16 @@
 }
 
 .switch {
+  cursor: pointer;
   margin: 0 8px;
   border: 1px solid #fd5103;
   border-radius: 20px;
   background-color: #ffffff;
   width: 40px;
   height: 16px;
+
+  box-shadow: 0 0 0 2px #fd5103, 0 0 4px #fd5103;
+
 
   & input {
     display: none;
@@ -145,11 +212,21 @@ input:checked + .slider {
 
 .header__search {
   display: flex;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   margin-bottom: 40px;
+  @media screen and(min-width: $tablet) {
+    display: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  @media screen and(min-width: $desktop) {
+    display: flex;
+    width: 288px;
+    height: 100%;
+  }
 }
 
 .btn-search {
@@ -177,6 +254,13 @@ input:checked + .slider {
 
 .tablet {
   display: none;
+  @media screen and(min-width: $tablet) {
+    display: flex;
+    width: 280px;
+  }
+  @media screen and(min-width: $desktop) {
+    display: none;
+  }
 }
 
 .nav-btn {
@@ -184,7 +268,9 @@ input:checked + .slider {
   padding: 0;
   background-color: transparent;
   z-index: 3;
-  @media screen and(min-width: $desktop) {
+
+  @media screen and(min-width:$desktop) {
+
     display: none;
   }
 }

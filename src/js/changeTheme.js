@@ -1,17 +1,25 @@
 let darkMode = localStorage.getItem('darkMode');
-const darkModeToggle = document.querySelector('.switch');
+const darkModeToggle = document.querySelector('#switch');
 
-const enabledDarkMode = () => {
+if (darkMode !== 'enabled') {
+  disabledDarkMode();
+} else {
+  enabledDarkMode();
+}
+
+function enabledDarkMode() {
   document.body.classList.add('dark-mode');
   localStorage.setItem('darkMode', 'enabled');
-};
+  darkModeToggle.checked = true;
+}
 
-const disabledDarkMode = () => {
+function disabledDarkMode() {
   document.body.classList.remove('dark-mode');
   localStorage.setItem('darkMode', null);
-};
+  darkModeToggle.checked = false;
+}
 
-disabledDarkMode();
+// disabledDarkMode();
 
 darkModeToggle.addEventListener('change', () => {
   darkMode = localStorage.getItem('darkMode');

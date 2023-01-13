@@ -16,3 +16,4 @@ import changeTheme from './js/changeTheme';
 import renderCocktails from './js/renderCocktails';
 import modalCloseOpen from './js/modal-close-open';
 import modalFetchCocktail from './js/modalFetchCocktail';
+import searchByFirstLetter from './js/search-by-first-letter'

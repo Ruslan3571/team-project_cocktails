@@ -16,12 +16,14 @@
 
   @media screen and (min-width: $tablet) {
     margin-top: 52px;
+    margin-bottom: 110px;
     display: flex;
     align-items: center;
   }
 
   @media screen and (min-width: $desktop) {
     margin-top: 60px;
+    margin-bottom: 105px;
   }
 }
 
@@ -103,7 +105,7 @@
 
   @media screen and (max-width: $pre-tablet) {
     text-align: center;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
   }
 
   @media screen and (min-width: $tablet) {
@@ -178,7 +180,7 @@
 .dropdown {
   position: relative;
   top: 50%;
-  left: 50%;
+  left: 40%;
   width: 93px;
   height: 34px;
   border: 1px solid #fd5103;
@@ -283,4 +285,5 @@
 
 .wrapper {
   position: relative;
+  margin-bottom: 40px;
 }

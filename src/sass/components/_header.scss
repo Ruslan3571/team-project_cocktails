@@ -1,8 +1,7 @@
 .header {
-
   padding: 20px 0;
   position: relative;
-  background-color: $primary-white-color;
+  background-color: var(--primary-white-color);
   @media screen and(min-width: $desktop) {
     position: static;
   }
@@ -29,7 +28,6 @@
 }
 
 .nav-wrapper {
-
   position: absolute;
   top: 0;
   right: -100%;
@@ -37,7 +35,7 @@
   width: 100%;
   height: 100vh;
   padding: 20px;
-  background-color: $primary-white-color;
+  background-color: var(--primary-white-color);
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
@@ -70,8 +68,7 @@
   font-size: 28px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: $primary-color;
-
+  color: var(--primary-color);
 
   &:hover {
     color: #fd5103;
@@ -79,7 +76,6 @@
   @media screen and(min-width: $desktop) {
     font-size: 18px;
   }
-
 }
 
 .nav__item:not(:last-child) {
@@ -100,14 +96,14 @@
     display: block;
   }
   @media screen and(min-width: $desktop) {
-  }display: none;
-
+  }
+  display: none;
 }
 
 .dropdowm__list {
   display: none;
-  background-color: #fcfcfc;
-  color: #000000;
+  background-color: var(--primary-white-color);
+  color: var(--primary-color);
 
   position: absolute;
 
@@ -128,20 +124,17 @@
   letter-spacing: 0.02em;
 }
 .dropdown__item {
-  background-color: #fcfcfc;
+  background-color: var(--primary-white-color);
   padding: 12px;
-  color: #000000;
-
-
+  color: var(--primary-color);
 
   &:hover {
     background-color: #fd5103;
-    color: #fcfcfc;
+    color: var(--primary-white-color);
   }
 }
 
 .header-switch {
-
   margin-top: 7px;
 
   display: flex;
@@ -168,8 +161,8 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1, 71px;
-  color: #15141d;
+  line-height: 1.71;
+  color: var(--primary-color);
 }
 
 .switch {
@@ -177,12 +170,11 @@
   margin: 0 8px;
   border: 1px solid #fd5103;
   border-radius: 20px;
-  background-color: #ffffff;
+  background-color: var(--primary-white-color);
   width: 40px;
   height: 16px;
 
   box-shadow: 0 0 0 2px #fd5103, 0 0 4px #fd5103;
-
 
   & input {
     display: none;
@@ -252,6 +244,7 @@ input:checked + .slider {
   line-height: 24px;
   padding: 8px;
   width: inherit;
+  background-color: inherit;
 }
 
 .tablet {
@@ -272,12 +265,10 @@ input:checked + .slider {
   z-index: 3;
 
   @media screen and(min-width:$desktop) {
-
     display: none;
   }
 }
 
 .is-open {
   right: 0;
- 
 }

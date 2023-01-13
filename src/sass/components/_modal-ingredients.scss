@@ -6,7 +6,7 @@
 
 .modal-ingridients__body {
   position: relative;
-  background-color: $primary-white-color;
+  background-color: var(--primary-white-color);
   width: 100%;
   margin: 75px 45px;
   padding: 40px 20px;
@@ -39,7 +39,7 @@
   font-size: 32px;
   line-height: 1.18;
 
-  color: $primary-color;
+  color: var(--primary-color);
 }
 
 .alcohol-type {
@@ -52,7 +52,7 @@
   line-height: 1.6;
   text-transform: uppercase;
 
-  color: $primary-color;
+  color: var(--primary-color);
 
   @media screen and (min-width: $tablet) {
     &::after {
@@ -76,7 +76,7 @@
   font-size: 16px;
   line-height: 1.7;
 
-  color: $primary-color;
+  color: var(--primary-color);
 }
 
 .descr-list {
@@ -89,7 +89,7 @@
   font-size: 16px;
   line-height: 1.6;
 
-  color: $primary-color;
+  color: var(--primary-color);
 }
 .ingredients-list__link {
 }
@@ -119,5 +119,5 @@
   outline: none;
 
   background-color: $primary-button-color;
-  color: $primary-white-color;
+  color: var(--primary-white-color);
 }

@@ -5,8 +5,10 @@ $tablet: 768px;
 $pre-desktop: 1279.98px;
 $desktop: 1280px;
 
-$primary-color: #202025;
-$primary-white-color: #fcfcfc;
+:root {
+  --primary-color: #202025;
+  --primary-white-color: #fcfcfc;
+}
 $primary-text-color: #fd5103;
 $secondary-text-color: #5f6775;
 $primary-button-color: #fe7031;
@@ -22,7 +24,6 @@ $roboto-font-700: 700;
 $roboto-font-900: 900;
 
 .dark-mode {
-  $primary-white-color: #202025;
-  $primary-color: #fcfcfc;
-  $primary-text-color: #fcfcfc;
+  --primary-color: #fcfcfc;
+  --primary-white-color: #202025;
 }

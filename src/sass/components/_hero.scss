@@ -16,12 +16,14 @@
 
   @media screen and (min-width: $tablet) {
     margin-top: 52px;
+    margin-bottom: 110px;
     display: flex;
     align-items: center;
   }
 
   @media screen and (min-width: $desktop) {
     margin-top: 60px;
+    margin-bottom: 105px;
   }
 }
 
@@ -98,16 +100,16 @@
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.02em;
-  color: #000000;
+  color: var(--primary-color);
   opacity: 0.8;
 
   @media screen and (max-width: $pre-tablet) {
     text-align: center;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
   }
 
   @media screen and (min-width: $tablet) {
-    color: $primary-color;
+    color: var(--primary-color);
     margin-bottom: 40px;
   }
 
@@ -178,7 +180,7 @@
 .dropdown {
   position: relative;
   top: 50%;
-  left: 50%;
+  left: 40%;
   width: 93px;
   height: 34px;
   border: 1px solid #fd5103;
@@ -187,7 +189,7 @@
 
   &:hover,
   &:focus {
-    color: #fcfcfc;
+    color: var(--primary-white-color);
     background-color: #fd5103;
   }
 }
@@ -212,7 +214,7 @@
 
   &:hover,
   &:focus {
-    color: #fcfcfc;
+    color: var(--primary-white-color);
     background-color: #fd5103;
   }
 }
@@ -266,7 +268,7 @@
 }
 
 .dropdown .options .option:hover {
-  color: #fcfcfc;
+  color: var(--primary-white-color);
   background: #fd5103;
 }
 
@@ -283,4 +285,5 @@
 
 .wrapper {
   position: relative;
+  margin-bottom: 40px;
 }

@@ -22,14 +22,14 @@ export function closeMobileMenu({ target }) {
     ref.nav.classList.remove('is-open');
     target.firstElementChild.style.display = 'block';
     target.lastElementChild.style.display = 'none';
-  
+    ref.header.style.overflow = 'hidden';
 }
 
 export function disableScroll() {
   document.body.style.overflow = 'hidden';
 }
 export function enableScroll() {
-  document.body.style.overflow = '';
+  document.body.style.overflow = 'visible';
 }
 
 ref.btn.addEventListener('click', ({ target }) =>

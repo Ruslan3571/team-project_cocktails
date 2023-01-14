@@ -25,7 +25,7 @@
 
 .cocktails__list {
 
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
@@ -187,15 +187,15 @@
     cursor: pointer;
 }
 
-.hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-}
+// .hidden {
+//     position: absolute;
+//     white-space: nowrap;
+//     width: 1px;
+//     height: 1px;
+//     overflow: hidden;
+//     border: 0;
+//     padding: 0;
+//     clip: rect(0 0 0 0);
+//     clip-path: inset(50%);
+//     margin: -1px;
+// }

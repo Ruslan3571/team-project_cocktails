@@ -1,4 +1,5 @@
 import { searchCocktailRandom } from './ApiServise';
+import icon from '../images/symbol-defs.svg';
 
 const list = document.querySelector('.cocktails__list-js');
 
@@ -51,10 +52,15 @@ function markupCard(card) {
               <h3 class="cocktails__subtitle">${strDrink}</h3>
               <div class="cocktails__buttons-wrapper">
                 <button class="cocktails__btn" type="button">Learn more</button>
-                <button class="cocktails__btn cocktails__btn--white" type="button">
+                <button class="cocktails__btn cocktails__btn--white add " type="button"  >
                   Add to
                   <svg class="heart-icon" width="18" height="18">
-                    <use href="./images/icon.svg#heart"></use>
+                    <use href="${icon}#icon-heart"></use>
+                  </svg>
+                  <button class="cocktails__btn cocktails__btn--white remove hidden" type="button">
+                  remove
+                  <svg class="heart-icon" width="18" height="18">
+                    <use href="${icon}#icon-heart-1"></use>
                   </svg>
                 </button>
               </div>

@@ -22,7 +22,7 @@
 }
 
 .cocktails__list {
-  // margin-bottom: 60px;
+  margin-bottom: 60px;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
@@ -171,14 +171,14 @@
 
 .cocktails__btn:hover,
 .cocktails__btn:focus {
-  background-color: var(--primary-white-color);
+  background-color: #f5f5f5;
   color: $primary-button-color;
   cursor: pointer;
 }
 
 .cocktails__btn--white:hover,
 .cocktails__btn--white:focus {
-  background-color: var(--primary-white-color);
+  background-color:#f5f5f5;
   cursor: pointer;
 }
 
@@ -235,4 +235,17 @@ button.remove::after {
   @media screen and (min-width: 1280px) {
     right: 20px;
   }
+}
+
+.hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }

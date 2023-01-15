@@ -8,7 +8,7 @@ import {
   searchIngredientsByName,
   searchIngredientsById,
 } from './js/ApiServise';
-// import addFavorite from './js/addFavorite';
+import addFavorite from './js/addFavorite';
 import changeTheme from './js/changeTheme';
 // import heroDropdown from './js/hero-dropdown';
 // import heroSearchMobile from './js/hero-search-mobile';

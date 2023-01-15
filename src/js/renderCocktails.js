@@ -5,11 +5,7 @@ import {
   searchIngredientsByName,
 } from './ApiServise';
 
-import {
-  createModalMarkup,
-  createModalMarkupTablet,
-  openModal,
-} from './modalFetchCocktail';
+import { openModal } from './modalFetchCocktail';
 
 const list = document.querySelector('.cocktails__list-js');
 window.addEventListener('load', renderCard);
@@ -67,7 +63,7 @@ function markupCard(card) {
             <div class="cocktails__content-wrapper">
               <h3 class="cocktails__subtitle">${strDrink}</h3>
               <div class="cocktails__buttons-wrapper">
-                <button class="cocktails__btn" type="button">Learn more</button>
+                <button data-modal-open id="${idDrink}" class="cocktails__btn" type="button">Learn more</button>
                 <button class="cocktails__btn cocktails__btn--white ${classEl}" type="button" data-action="add" data-id="${idDrink}" data-name="${strDrink}">${btnValue}</button>
               </div>
             </div>

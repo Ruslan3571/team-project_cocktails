@@ -1,7 +1,17 @@
-import { searchCocktailRandom } from './ApiServise';
+import {
+  searchCocktailRandom,
+  searchCocktailById,
+  // searchIngredientsById,
+  searchIngredientsByName,
+} from './ApiServise';
+
+import {
+  createModalMarkup,
+  createModalMarkupTablet,
+  openModal,
+} from './modalFetchCocktail';
 
 const list = document.querySelector('.cocktails__list-js');
-
 window.addEventListener('load', renderCard);
 let cocktail = [];
 let cardOfCocktail = null;
@@ -38,7 +48,7 @@ async function renderCard() {
 }
 function markupCard(card) {
   const markup = card
-    .map(({ strDrink, strDrinkThumb }) => {
+    .map(({ strDrink, strDrinkThumb, idDrink }) => {
       return `<li class="cocktails__card">
             <div class="cocktails__thumb">
               <img
@@ -50,7 +60,7 @@ function markupCard(card) {
             <div class="cocktails__content-wrapper">
               <h3 class="cocktails__subtitle">${strDrink}</h3>
               <div class="cocktails__buttons-wrapper">
-                <button class="cocktails__btn" type="button">Learn more</button>
+                <button data-modal-open class="cocktails__btn" type="button" id='${idDrink}'>Learn more</button>
                 <button class="cocktails__btn cocktails__btn--white" type="button">
                   Add to
                   <svg class="heart-icon" width="18" height="18">
@@ -64,3 +74,26 @@ function markupCard(card) {
     .join('');
   return (list.innerHTML = markup);
 }
+
+const refs = {
+  openModalBtn: document.querySelector('[data-modal-open]'),
+  modal: document.querySelector('[data-modal]'),
+};
+
+(() => {
+  const closeModalBtn = document.querySelector('[data-modal-close]');
+  closeModalBtn.addEventListener('click', () => {
+    refs.modal.classList.toggle('is-hidden');
+  });
+})();
+
+(() => {
+  const closeTabletModalBtn = document.querySelector(
+    '[data-tablet-modal-close]'
+  );
+  closeTabletModalBtn.addEventListener('click', () => {
+    refs.modal.classList.toggle('is-hidden');
+  });
+})();
+
+list.addEventListener('click', openModal);

@@ -1,25 +1,17 @@
-import { searchCocktailById } from '../js/ApiServise';
-import { searchIngredientsById } from '../js/ApiServise';
 import { searchIngredientsByName } from '../js/ApiServise';
 
 const modal = document.querySelector('[data-modal]');
-(() => {
-  const closeModalBtn = document.querySelector('[data-modal-close]');
-  closeModalBtn.addEventListener('click', () => {
-    modal.classList.toggle('is-hidden');
-  });
-})();
+// (() => {
+//   const closeModalBtn = document.querySelector('[data-modal-close]');
+//   closeModalBtn.addEventListener('click', () => {
+//     modal.classList.toggle('is-hidden');
+//   });
+// })();
 
-<<<<<<< Updated upstream
 const ingredientContent = document.querySelector('.modal-ingridients__body');
 const modalIngr = document.querySelector('[data-modal-set]');
 const descrListTablet = document.querySelector('.modal-tablet__body');
 const descrListMobile = document.querySelector('.modal-mobile__body');
-=======
-console.log(searchIngredientsById(096));
-console.log(searchCocktailById(11007));
-console.log(searchIngredientsByName('Campari'));
->>>>>>> Stashed changes
 
 function createingredientModalMarkup(ingredients) {
   const markup = ingredients
@@ -50,17 +42,7 @@ function createingredientModalMarkup(ingredients) {
       }
     )
     .join('');
-<<<<<<< Updated upstream
   ingredientContent.insertAdjacentHTML('afterbegin', markup);
-=======
-  ingridientContent.insertAdjacentHTML('afterbegin', markup);
-};
-
-export function showModalWithIngridientDetails(ingredientId) {
-  return searchIngredientsById(ingredientId).then(({ ingredients }) =>
-    createIngridientModalMarkup(ingredients)
-  );
->>>>>>> Stashed changes
 }
 export function openIngredientModal(event) {
   console.log(event.target.dataset);

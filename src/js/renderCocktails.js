@@ -1,15 +1,7 @@
-import {
-  searchCocktailRandom,
-  searchCocktailById,
-  // searchIngredientsById,
-  searchIngredientsByName,
-} from './ApiServise';
+import { searchCocktailRandom } from './ApiServise';
 
-<<<<<<< Updated upstream
 import { openModal } from './modalFetchCocktail';
 
-=======
->>>>>>> Stashed changes
 const list = document.querySelector('.cocktails__list-js');
 window.addEventListener('load', renderCard);
 let cocktail = [];
@@ -75,26 +67,5 @@ function markupCard(card) {
     .join('');
   return (list.innerHTML = markup);
 }
-
-const refs = {
-  openModalBtn: document.querySelector('[data-modal-open]'),
-  modal: document.querySelector('[data-modal]'),
-};
-
-(() => {
-  const closeModalBtn = document.querySelector('[data-modal-close]');
-  closeModalBtn.addEventListener('click', () => {
-    refs.modal.classList.toggle('is-hidden');
-  });
-})();
-
-(() => {
-  const closeTabletModalBtn = document.querySelector(
-    '[data-tablet-modal-close]'
-  );
-  closeTabletModalBtn.addEventListener('click', () => {
-    refs.modal.classList.toggle('is-hidden');
-  });
-})();
 
 list.addEventListener('click', openModal);

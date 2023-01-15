@@ -76,6 +76,5 @@ export async function searchIngredientsById(searchParameter) {
   }
 }
 
-
 // searchIngredientsById(552)
 // searchCocktailRandom();

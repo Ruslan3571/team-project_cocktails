@@ -5,8 +5,11 @@ import {
   searchIngredientsByName,
 } from './ApiServise';
 
+<<<<<<< Updated upstream
 import { openModal } from './modalFetchCocktail';
 
+=======
+>>>>>>> Stashed changes
 const list = document.querySelector('.cocktails__list-js');
 window.addEventListener('load', renderCard);
 let cocktail = [];

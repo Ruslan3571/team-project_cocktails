@@ -9,6 +9,7 @@
 //   }
 // }
 
+<<<<<<< Updated upstream
 // list.addEventListener('click', toggleModal);
 
 // const modal = document.querySelector('.popup'); /* 1 окно*/
@@ -16,6 +17,21 @@
 //   document.querySelector('.user-info__button'); /* кнопка открытия 1 окна */
 // const closeButton =
 //   document.querySelectorAll('.popup__close'); /* кнопка закрытия */
+=======
+  // refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+  }
+})();
+
+// const modal = document.querySelector('.modal__body'); /* 1 окно*/
+// const trigger =
+//   document.querySelector('.cocktails__btn'); /* кнопка открытия 1 окна */
+// const closeButton =
+//   document.querySelectorAll('[data-modal-close]'); /* кнопка закрытия */
+>>>>>>> Stashed changes
 // const modalProfile = document.querySelector('.popup_profile'); /* 2 окно*/
 // const profile = document.querySelector(
 //   '.user-info__edit_button'

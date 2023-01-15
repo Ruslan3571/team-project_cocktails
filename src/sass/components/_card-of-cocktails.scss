@@ -181,3 +181,58 @@
   background-color: var(--primary-white-color);
   cursor: pointer;
 }
+
+button.added::after {
+  position: absolute;
+
+  top: 11px;
+  right: 16px;
+  content: '';
+  display: block;
+  width: 19px;
+  height: 17px;
+
+  background-image: url(../images/heart-1.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (min-width: 768px) {
+    top: 15px;
+    right: 8px;
+
+    width: 21px;
+    height: 19px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: 20px;
+  }
+}
+
+button.remove::after {
+  position: absolute;
+
+  top: 11px;
+  right: 16px;
+  content: '';
+  display: block;
+  width: 19px;
+  height: 17px;
+
+  background-image: url(../images/heart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    top: 15px;
+    right: 8px;
+
+    width: 21px;
+    height: 19px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: 20px;
+  }
+}

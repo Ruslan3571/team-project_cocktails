@@ -10,13 +10,17 @@ import {
 } from './js/ApiServise';
 import addFavorite from './js/addFavorite';
 import changeTheme from './js/changeTheme';
-import heroDropdown from './js/hero-dropdown';
-import heroSearchMobile from './js/hero-search-mobile';
+
 import heroSearch from './js/hero-search';
 import mobileMenu from './js/mobileMenu';
-// import modalCloseOpen from './js/modal-close-open';
-// import modalFetchCocktail from './js/modalFetchCocktail';
-// import modalFetchIngridient from './js/modalFetchIngridient';
+import changeTheme from './js/changeTheme';
+
+import heroSearch from './js/hero-search';
+import heroSearchMobile from './js/hero-search-mobile';
+import heroDropdown from './js/hero-dropdown';
+import mobileMenu from './js/mobileMenu';
+import { openModal, getIngridient } from './js/modalFetchCocktail';
+import { openIngredientModal } from './js/modalFetchIngridient';
 import pagination from './js/pagination';
 import renderCocktails from './js/renderCocktails';
 import renderFavoriteCock from './js/renderFavoriteCock';

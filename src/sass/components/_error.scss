@@ -9,6 +9,7 @@
       margin-bottom: 60px;
     }
     &-title {
+      color: var(--primary-color);
       margin-top: 40px;
       margin-bottom: 60px;
       font-family: 'Poppins';
@@ -25,6 +26,7 @@
 @media screen and (min-width: 768px) {
   .error {
     &-title {
+      color: var(--primary-color);
       font-family: 'Roboto';
       font-weight: 700;
       font-size: 32px;
@@ -37,6 +39,7 @@
 @media screen and (min-width: 1280px) {
   .error {
     &-title {
+      color: var(--primary-color);
       margin-bottom: 70px;
       font-size: 48px;
       line-height: 1.5;

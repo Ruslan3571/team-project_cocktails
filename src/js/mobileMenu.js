@@ -19,6 +19,7 @@ export function closeMobileMenu({ target }) {
   target.firstElementChild.style.display = 'block';
   target.lastElementChild.style.display = 'none';
   ref.header.style.overflow = 'hidden';
+  enableScroll()
 }
 
 export function disableScroll() {

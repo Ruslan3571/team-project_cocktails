@@ -63,7 +63,7 @@ async function handleSearchCocktailsByFirstLetterMob(event) {
 }
 
 // markup function
-function markupCard(data) {
+ export function markupCard(data) {
   const markup = data
     .map(({ strDrink, strDrinkThumb }) => {
       return `<li class="cocktails__card">

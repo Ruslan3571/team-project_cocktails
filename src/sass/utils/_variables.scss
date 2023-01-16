@@ -8,6 +8,8 @@ $desktop: 1280px;
 :root {
   --primary-color: #202025;
   --primary-white-color: #fcfcfc;
+  --switch-bgc-color:#fcfcfc;
+  --switch-btn-color:#fd5103;
 }
 $primary-text-color: #fd5103;
 $secondary-text-color: #5f6775;
@@ -26,4 +28,6 @@ $roboto-font-900: 900;
 .dark-mode {
   --primary-color: #fcfcfc;
   --primary-white-color: #202025;
+  --switch-bgc-color:#fe7031;
+  --switch-btn-color:#fcfcfc;
 }

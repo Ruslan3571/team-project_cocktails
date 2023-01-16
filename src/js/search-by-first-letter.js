@@ -17,7 +17,9 @@ async function handleSearchCocktailsByFirstLetter(event) {
   try {
     let searchQuery = event.target.dataset.value;
     const data = await searchCocktailByFirstLetter(searchQuery);
-    console.log(data.drinks.length);
+
+    cocktailsSection.classList.remove('is-hidden');
+    errorSection.classList.add('is-hidden');
 
     if (window.matchMedia('(min-width: 1280px)').matches) {
       for (let i = 0; i < 9; i++) {
@@ -51,6 +53,9 @@ async function handleSearchCocktailsByFirstLetterMob(event) {
   try {
     let searchQuery = event.target.dataset.value;
     const data = await searchCocktailByFirstLetter(searchQuery);
+
+    cocktailsSection.classList.remove('is-hidden');
+    errorSection.classList.add('is-hidden');
 
     if (window.matchMedia('(min-width: 320px)').matches) {
       for (let i = 0; i < 3; i++) {

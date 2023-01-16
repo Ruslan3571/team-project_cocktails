@@ -60,7 +60,6 @@ export function createModalMarkupTablet(drinks) {
                 <p class="instruction-text">${strInstructions}</p>`;
     })
     .join('');
-  modalContentTablet.insertAdjacentHTML = '';
   modalContentTablet.insertAdjacentHTML('afterbegin', markup);
 }
 

@@ -1,22 +1,26 @@
 import { searchCocktailByFirstLetter } from './ApiServise';
 
+const heroSection = document.querySelector('.hero');
+const cocktailsSection = document.querySelector('.cocktails');
 const list = document.querySelector('.cocktails__list-js');
+const errorSection = document.querySelector('.error');
+const searchList = document.querySelector('.hero__search-list-wrapper');
 
 let cocktail = [];
 let cardOfCocktail = null;
 
 // search function for tablet and desktop
-const searchList = document.querySelector('.hero__search-list-wrapper');
 
 searchList.addEventListener('click', handleSearchCocktailsByFirstLetter);
 
 async function handleSearchCocktailsByFirstLetter(event) {
   try {
     let searchQuery = event.target.dataset.value;
+    const data = await searchCocktailByFirstLetter(searchQuery);
+    console.log(data.drinks.length);
 
     if (window.matchMedia('(min-width: 1280px)').matches) {
       for (let i = 0; i < 9; i++) {
-        const data = await searchCocktailByFirstLetter(searchQuery);
         cocktail = data.drinks;
         cardOfCocktail = cocktail.flat();
       }
@@ -25,7 +29,6 @@ async function handleSearchCocktailsByFirstLetter(event) {
       return;
     } else if (window.matchMedia('(min-width: 768px)').matches) {
       for (let i = 0; i < 6; i++) {
-        const data = await searchCocktailByFirstLetter(searchQuery);
         cocktail = data.drinks;
         cardOfCocktail = cocktail.flat();
       }
@@ -34,7 +37,8 @@ async function handleSearchCocktailsByFirstLetter(event) {
       return;
     }
   } catch (error) {
-    console.log(error);
+    cocktailsSection.classList.add('is-hidden');
+    errorSection.classList.remove('is-hidden');
   }
 }
 
@@ -46,10 +50,10 @@ searchListMob.addEventListener('click', handleSearchCocktailsByFirstLetterMob);
 async function handleSearchCocktailsByFirstLetterMob(event) {
   try {
     let searchQuery = event.target.dataset.value;
+    const data = await searchCocktailByFirstLetter(searchQuery);
 
     if (window.matchMedia('(min-width: 320px)').matches) {
       for (let i = 0; i < 3; i++) {
-        const data = await searchCocktailByFirstLetter(searchQuery);
         cocktail = data.drinks;
         cardOfCocktail = cocktail.flat();
       }
@@ -58,7 +62,8 @@ async function handleSearchCocktailsByFirstLetterMob(event) {
       return;
     }
   } catch (error) {
-    console.log(error);
+    cocktailsSection.classList.add('is-hidden');
+    errorSection.classList.remove('is-hidden');
   }
 }
 

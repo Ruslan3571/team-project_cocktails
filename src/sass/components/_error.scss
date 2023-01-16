@@ -1,10 +1,9 @@
 @media screen and (min-width: 320px) {
   .error {
-    display: none;
     &-container {
       display: flex;
-      justify-content: center;
       flex-direction: column;
+      align-items: center;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 60px;
@@ -12,41 +11,36 @@
     &-title {
       margin-top: 40px;
       margin-bottom: 60px;
-
       font-family: 'Poppins';
       font-style: normal;
       font-weight: 600;
       font-size: 22px;
       line-height: 1.91;
       text-align: center;
+      max-width: 280px;
     }
   }
 }
 
 @media screen and (min-width: 768px) {
   .error {
-    &-container {
-      width: 350px;
-    }
     &-title {
-      margin-top: 100px;
-
       font-family: 'Roboto';
       font-weight: 700;
       font-size: 32px;
       line-height: 1.31;
+      max-width: 331px;
     }
   }
 }
 
 @media screen and (min-width: 1280px) {
   .error {
-    &-container {
-      width: 500px;
-    }
     &-title {
+      margin-bottom: 70px;
       font-size: 48px;
       line-height: 1.5;
+      max-width: 493px;
     }
   }
 }

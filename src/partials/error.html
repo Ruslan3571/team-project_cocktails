@@ -1,6 +1,21 @@
-<section class="error section" id="error">
+<section class="error section is-hidden" id="error">
   <div class="error-container container">
     <h2 class="error-title">Sorry, we didn't find any cocktail for you</h2>
-    <img class="error-img" src="./images/error.svg" alt="" />
+    <picture>
+      <source
+        srcset="
+          /src/images/error/error_480.png    1x,
+          /src/images/error/error_480@2x.png 2x
+        "
+        media="(max-width: 767.98px)"
+      />
+      <source
+          srcset="
+            /src/images/error/error_768.png    1x,
+            /src/images/error/error_768@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+      <img class="error-img" src="/src/images/error/error_480.png" alt="date in restaurant" />
   </div>
 </section>

@@ -1,4 +1,5 @@
-import { searchCocktailRandom } from './ApiServise';
+import { searchCocktailRandom, searchIngredientsByName } from './ApiServise';
+import { openModal } from './modalFetchCocktail';
 
 const list = document.querySelector('.cocktails__list-js');
 
@@ -57,7 +58,7 @@ function markupCard(card) {
             <div class="cocktails__content-wrapper">
               <h3 class="cocktails__subtitle">${strDrink}</h3>
               <div class="cocktails__buttons-wrapper">
-                <button class="cocktails__btn" type="button">Learn more</button>
+                <button data-modal-open id="${idDrink}" class="cocktails__btn" type="button" data-modal-open >Learn more</button>
                 <button class="cocktails__btn cocktails__btn--white ${classEl}" type="button" data-action="add" data-id="${idDrink}" data-name="${strDrink}">${btnValue}</button>
               </div>
             </div>
@@ -66,3 +67,25 @@ function markupCard(card) {
     .join('');
   return (list.innerHTML = markup);
 }
+
+list.addEventListener('click', openModal);
+
+// const refs = {
+//   openModalBtn: document.querySelector('[data-modal-open]'),
+//   modal: document.querySelector('[data-modal]'),
+// };
+// (() => {
+//   const closeModalBtn = document.querySelector('[data-modal-close]');
+//   closeModalBtn.addEventListener('click', () => {
+//     refs.modal.classList.toggle('is-hidden');
+//   });
+// })();
+// (() => {
+//   const closeTabletModalBtn = document.querySelector(
+//     '[data-tablet-modal-close]'
+//   );
+//   closeTabletModalBtn.addEventListener('click', () => {
+//     refs.modal.classList.toggle('is-hidden');
+//   });
+// })();
+// list.addEventListener('click', openModal);

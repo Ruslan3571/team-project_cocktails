@@ -38,6 +38,8 @@ function markupCard(card) {
         classEl = 'added';
         btnValue = 'remove';
       }
+
+
       refsFavoriteTitle.classList.remove('hidden');
 
       return `<li class="cocktails__card">

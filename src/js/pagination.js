@@ -1,147 +1,160 @@
-// const refs = {
-//   formEl: document.querySelector('.hero__search-list-wrapper'),
-//   paginationContainer: document.querySelector('.pagination-container'),
-//   paginationListContainer: document.querySelector('.pagination'),
-// };
+// import { searchCocktailByFirstLetter } from './ApiServise';
 
-// refs.formEl.addEventListener('submit', handlerSubmitForm);
+// const heroSection = document.querySelector('.hero');
+// const cocktailsSection = document.querySelector('.cocktails');
+// const list = document.querySelector('.cocktails__list-js');
+// const errorSection = document.querySelector('.error');
+// const searchList = document.querySelector('.hero__search-list-wrapper');
+// const ulEl = document.querySelector('.pagination__list');
 
-// async function handlerSubmitForm(e) {
-//   refs.paginationContainer.innerHTML = '';
-//   refs.paginationListContainer.innerHTML = '';
+// let cocktail = [];
+// let cardOfCocktail = null;
+// let page = 1;
+// let limit = 3;
+
+// //  <!-------------------------- ❗️❗️❗️  search function for tablet and desktop ❗️❗️❗️------------------------------------->
+
+// searchList.addEventListener('click', handleSearchCocktailsByFirstLetter);
+
+// async function handleSearchCocktailsByFirstLetter(event) {
 //   try {
-//     const cocktailsData = data.drinks;
-//     let currentPage = 1;
-//     let rows;
-//     if (window.innerWidth < 768) {
-//       rows = 3;
-//     } else if (window.innerWidth >= 768 && window.innerWidth < 1280) {
-//       rows = 6;
-//     } else if (window.innerWidth >= 1280) {
-//       rows = 9;
-//     }
+//     let searchQuery = event.target.dataset.value;
+//     const data = await searchCocktailByFirstLetter(searchQuery);
 
-//     function displayList(cocktailsArr, rowPerPage, page) {
-//       const paginationContainer = document.querySelector(
-//         '.pagination-container'
-//       );
-//       paginationContainer.innerHTML = '';
-//       page--;
-//       const start = rowPerPage * page;
-//       const end = start + rowPerPage;
-//       const paginatedData = cocktailsArr.slice(start, end);
+//     cocktailsSection.classList.remove('is-hidden');
+//     errorSection.classList.add('is-hidden');
 
-//       paginatedData.forEach(el => {
-//         const cocktailEl = document.createElement('div');
-//         cocktailEl.innerHTML = el.strDrink;
-//       });
-//     }
-//     function displayPagination(cocktailsArr, rowPerPage) {
-//       const paginationEl = document.querySelector('.pagination');
-//       const pagesCount = Math.ceil(cocktailsArr.length / rowPerPage);
-//       const ulEl = document.createElement('ul');
-//       ulEl.classList.add('pagination-list');
-
-//       for (let i = 0; i < pagesCount; i++) {
-//         const liEl = displayPaginationBtn(i + 1);
-//         ulEl.appendChild(liEl);
+//     if (window.matchMedia('(min-width: 1280px)').matches) {
+//       for (let i = 0; i < 9; i++) {
+//         cocktail = data.drinks;
+//         cardOfCocktail = cocktail.flat();
 //       }
-//       paginationEl.appendChild(ulEl);
-//     }
-//     function displayPaginationBtn(page) {
-//       const liEl = document.createElement('li');
-//       const spanEl = document.createElement('span');
-//       liEl.classList.add('pagination-btn');
-//       liEl.appendChild(spanEl);
-//       spanEl.textContent = page;
-
-//       if (currentPage === page) liEl.classList.add('pagination-btn-active');
-
-//       liEl.addEventListener('click', () => {
-//         currentPage = page;
-//         displayList(cocktailsData, rows, currentPage);
-
-//         const currentLi = document.querySelector('li.pagination-btn-active');
-//         currentLi.classList.remove('pagination-btn-active');
-
-//         liEl.classList.add('pagination-btn-active');
-//       });
-//       return liEl;
-//     }
-
-//     displayList(cocktailsData, rows, currentPage);
-//     if (cocktailsData.length > rows) {
-//       displayPagination(cocktailsData, rows);
+//       list.innerHTML = '';
+//       //  <!-------------------------- ❗️  pagination function call ------------------------------------->
+//       ulEl.innerHTML = '';
+//       limit = 9;
+//       pagination();
+//       const groupOfCocktails = getGroupOfCocktails();
+//       markupCard(groupOfCocktails);
+//       //  <!--------------------------   pagination function end ❗️------------------------------------->
+//       return;
+//     } else if (window.matchMedia('(min-width: 768px)').matches) {
+//       for (let i = 0; i < 6; i++) {
+//         cocktail = data.drinks;
+//         cardOfCocktail = cocktail.flat();
+//       }
+//       list.innerHTML = '';
+//       //  <!-------------------------- ❗️  pagination function call ------------------------------------->
+//       ulEl.innerHTML = '';
+//       limit = 6;
+//       pagination();
+//       const groupOfCocktails = getGroupOfCocktails();
+//       markupCard(groupOfCocktails);
+//       //  <!--------------------------   pagination function end ❗️------------------------------------->
+//       return;
 //     }
 //   } catch (error) {
-//     console.log(error);
+//     cocktailsSection.classList.add('is-hidden');
+//     errorSection.classList.remove('is-hidden');
 //   }
 // }
 
-// ТЕСТ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// async function getData() {
-//   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-//   const data = await response.json();
-//   return data;
-// }
+// //  <!-------------------------- ❗️❗️❗️  search function for mobile ❗️❗️❗️------------------------------------->
+// const searchListMob = document.querySelector('.options');
 
-// async function main() {
-//   const postsData = await getData();
-//   let currentPage = 1;
-//   let rows = 10;
+// searchListMob.addEventListener('click', handleSearchCocktailsByFirstLetterMob);
 
-//   function displayList(arrData, rowPerPage, page) {
-//     const postsEl = document.querySelector('.posts');
-//     postsEl.innerHTML = '';
-//     page--;
+// async function handleSearchCocktailsByFirstLetterMob(event) {
+//   try {
+//     let searchQuery = event.target.dataset.value;
+//     const data = await searchCocktailByFirstLetter(searchQuery);
 
-//     const start = rowPerPage * page;
-//     const end = start + rowPerPage;
-//     const paginatedData = arrData.slice(start, end);
+//     cocktailsSection.classList.remove('is-hidden');
+//     errorSection.classList.add('is-hidden');
 
-//     paginatedData.forEach(el => {
-//       const postEl = document.createElement('div');
-//       postEl.classList.add('post');
-//       postEl.innerText = `${el.title}`;
-//       postsEl.appendChild(postEl);
-//     });
-//   }
-
-//   function displayPagination(arrData, rowPerPage) {
-//     const paginationEl = document.querySelector('.pagination');
-//     const pagesCount = Math.ceil(arrData.length / rowPerPage);
-//     const ulEl = document.createElement('ul');
-//     ulEl.classList.add('pagination__list');
-
-//     for (let i = 0; i < pagesCount; i++) {
-//       const liEl = displayPaginationBtn(i + 1);
-//       ulEl.appendChild(liEl);
+//     if (window.matchMedia('(min-width: 320px)').matches) {
+//       for (let i = 0; i < 3; i++) {
+//         cocktail = data.drinks;
+//         cardOfCocktail = cocktail.flat();
+//       }
+//       list.innerHTML = '';
+//       //  <!-------------------------- ❗️  pagination function call ------------------------------------->
+//       ulEl.innerHTML = '';
+//       limit = 6;
+//       pagination();
+//       const groupOfCocktails = getGroupOfCocktails();
+//       markupCard(groupOfCocktails);
+//       //  <!--------------------------   pagination function end ❗️------------------------------------->
+//       return;
 //     }
-//     paginationEl.appendChild(ulEl);
+//   } catch (error) {
+//     cocktailsSection.classList.add('is-hidden');
+//     errorSection.classList.remove('is-hidden');
 //   }
-
-//   function displayPaginationBtn(page) {
-//     const liEl = document.createElement('li');
-//     liEl.classList.add('pagination__item');
-//     liEl.innerText = page;
-
-//     if (currentPage == page) liEl.classList.add('pagination__item--active');
-
-//     liEl.addEventListener('click', () => {
-//       currentPage = page;
-//       displayList(postsData, rows, currentPage);
-
-//       let currentItemLi = document.querySelector('li.pagination__item--active');
-//       currentItemLi.classList.remove('pagination__item--active');
-
-//       liEl.classList.add('pagination__item--active');
-//     });
-
-//     return liEl;
-//   }
-
-//   displayList(postsData, rows, currentPage);
-//   displayPagination(postsData, rows);
 // }
 
-// main();
+// //  <!-------------------------- ❗️❗️❗️  markup function ❗️❗️❗️------------------------------------->
+// function markupCard(data) {
+//   const markup = data
+//     .map(({ strDrink, strDrinkThumb, idDrink }) => {
+//       let classEl = 'remove';
+//       let btnValue = 'Add to';
+//       if (JSON.parse(localStorage.getItem('names')).includes(strDrink)) {
+//         classEl = 'added';
+//         btnValue = 'remove';
+//       }
+
+//       return `<li class="cocktails__card">
+//             <div class="cocktails__thumb">
+//               <img
+//                 class="cocktails__image"
+//                 src="${strDrinkThumb}"
+//                 alt="${strDrink}"
+//               />
+//             </div>
+//             <div class="cocktails__content-wrapper">
+//               <h3 class="cocktails__subtitle">${strDrink}</h3>
+//               <div class="cocktails__buttons-wrapper">
+//                 <button data-modal-open id="${idDrink}" class="cocktails__btn" type="button" data-modal-open >Learn more</button>
+//                 <button class="cocktails__btn cocktails__btn--white ${classEl}" type="button" data-action="add" data-id="${idDrink}" data-name="${strDrink}">${btnValue}</button>
+//               </div>
+//             </div>
+//           </li>`;
+//     })
+//     .join('');
+//   return (list.innerHTML = markup);
+// }
+
+// //  <!-------------------------- ❗️❗️❗️  pagination function ❗️❗️❗️------------------------------------->
+// function getGroupOfCocktails() {
+//   const groupOfCocktails = [...cocktail].splice((page - 1) * limit, limit);
+//   return groupOfCocktails;
+// }
+
+// function pagination() {
+//   let totalPages = Math.ceil(cocktail.length / limit);
+//   for (let i = 0; i < totalPages; i++) {
+//     if (totalPages === 1) {
+//       return;
+//     }
+//     const liEl = `<li class="pagination__item">${i + 1}</li>`;
+//     ulEl.insertAdjacentHTML(`beforeend`, liEl);
+//   }
+//   ulEl.firstElementChild.classList.add('pagination__item--active');
+//   ulEl.addEventListener('click', changePage);
+// }
+
+// function changePage(event) {
+//   if (event.target.tagName === `LI`) {
+//     page = event.target.textContent;
+//     const previousLi = ulEl.querySelector('.pagination__item--active');
+
+//     if (previousLi) {
+//       previousLi.classList.remove('pagination__item--active');
+//       event.target.classList.add('pagination__item--active');
+//     }
+
+//     const groupOfCocktails = getGroupOfCocktails();
+//     markupCard(groupOfCocktails);
+//   }
+// }

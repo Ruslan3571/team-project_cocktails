@@ -21,7 +21,7 @@ import mobileMenu from './js/mobileMenu';
 import renderCocktails from './js/renderCocktails';
 import renderFavoriteCock from './js/renderFavoriteCock';
 import searchByFirstLetter from './js/search-by-first-letter';
-// import searchByFirstLetter from './js/search-by-first-letter (3)';
+
 
 import { openModal, getIngridient } from './js/modalFetchCocktail';
 import { openIngredientModal } from './js/modalFetchIngridient';

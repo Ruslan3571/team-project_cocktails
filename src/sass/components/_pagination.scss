@@ -31,17 +31,7 @@
 //     padding-right: 16px;
 //   }
 // }
-// .pagination-btnel {
-//   width: 70px;
-//   height: 70px;
-//   font-size: 30px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 40px;
-//   height: 40px;
-//   color: orange;
-// }
+
 // .pagination-btn {
 //   width: 70px;
 //   height: 70px;
@@ -64,45 +54,34 @@
 
 // тест!!!!!!!!!!!!!!!!!!!!!!!
 
-// .container {
-//   max-width: 1200px;
-//   margin: 0 auto;
-// }
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-// .title {
-//   display: flex;
-//   justify-content: center;
-// }
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  justify-content: center;
+}
 
-// .posts {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
+.pagination__item {
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $primary-button-color;
+  border-radius: 50%;
+  color: var(--primary-color);
+  cursor: pointer;
+}
 
-// .post {
-//   padding: 8px;
-//   border-color: bisque;
-//   border: 1px;
-// }
-
-// .pagination {
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .pagination__list {
-//   display: flex;
-//   list-style-type: none;
-// }
-
-// .pagination__item {
-//   padding: 8px;
-//   margin: 8px;
-//   cursor: pointer;
-// }
-
-// .pagination__item--active {
-//   font-weight: 800;
-//   color: gold;
-// }
+.pagination__item--active {
+  background-color: $primary-button-color;
+  color: white;
+}

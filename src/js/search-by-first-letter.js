@@ -5,11 +5,14 @@ const cocktailsSection = document.querySelector('.cocktails');
 const list = document.querySelector('.cocktails__list-js');
 const errorSection = document.querySelector('.error');
 const searchList = document.querySelector('.hero__search-list-wrapper');
+const ulEl = document.querySelector('.pagination__list');
 
 let cocktail = [];
 let cardOfCocktail = null;
+let page = 1;
+let limit = 3;
 
-// search function for tablet and desktop
+//  <!-------------------------- ❗️❗️❗️  search function for tablet and desktop ❗️❗️❗️------------------------------------->
 
 searchList.addEventListener('click', handleSearchCocktailsByFirstLetter);
 
@@ -17,7 +20,7 @@ async function handleSearchCocktailsByFirstLetter(event) {
   try {
     let searchQuery = event.target.dataset.value;
     const data = await searchCocktailByFirstLetter(searchQuery);
-    console.log(data.drinks);
+
     cocktailsSection.classList.remove('is-hidden');
     errorSection.classList.add('is-hidden');
 
@@ -27,7 +30,13 @@ async function handleSearchCocktailsByFirstLetter(event) {
         cardOfCocktail = cocktail.flat();
       }
       list.innerHTML = '';
-      markupCard(cardOfCocktail);
+      //  <!-------------------------- ❗️  pagination function call ------------------------------------->
+      ulEl.innerHTML = '';
+      limit = 9;
+      pagination();
+      const groupOfCocktails = getGroupOfCocktails();
+      markupCard(groupOfCocktails);
+      //  <!--------------------------   pagination function end ❗️------------------------------------->
       return;
     } else if (window.matchMedia('(min-width: 768px)').matches) {
       for (let i = 0; i < 6; i++) {
@@ -35,7 +44,13 @@ async function handleSearchCocktailsByFirstLetter(event) {
         cardOfCocktail = cocktail.flat();
       }
       list.innerHTML = '';
-      markupCard(cardOfCocktail);
+      //  <!-------------------------- ❗️  pagination function call ------------------------------------->
+      ulEl.innerHTML = '';
+      limit = 6;
+      pagination();
+      const groupOfCocktails = getGroupOfCocktails();
+      markupCard(groupOfCocktails);
+      //  <!--------------------------   pagination function end ❗️------------------------------------->
       return;
     }
   } catch (error) {
@@ -44,7 +59,7 @@ async function handleSearchCocktailsByFirstLetter(event) {
   }
 }
 
-// search function for mobile
+//  <!-------------------------- ❗️❗️❗️  search function for mobile ❗️❗️❗️------------------------------------->
 const searchListMob = document.querySelector('.options');
 
 searchListMob.addEventListener('click', handleSearchCocktailsByFirstLetterMob);
@@ -63,7 +78,13 @@ async function handleSearchCocktailsByFirstLetterMob(event) {
         cardOfCocktail = cocktail.flat();
       }
       list.innerHTML = '';
-      markupCard(cardOfCocktail);
+      //  <!-------------------------- ❗️  pagination function call ------------------------------------->
+      ulEl.innerHTML = '';
+      limit = 6;
+      pagination();
+      const groupOfCocktails = getGroupOfCocktails();
+      markupCard(groupOfCocktails);
+      //  <!--------------------------   pagination function end ❗️------------------------------------->
       return;
     }
   } catch (error) {
@@ -72,7 +93,7 @@ async function handleSearchCocktailsByFirstLetterMob(event) {
   }
 }
 
-// markup function
+//  <!-------------------------- ❗️❗️❗️  markup function ❗️❗️❗️------------------------------------->
 function markupCard(data) {
   const markup = data
     .map(({ strDrink, strDrinkThumb, idDrink }) => {
@@ -102,4 +123,38 @@ function markupCard(data) {
     })
     .join('');
   return (list.innerHTML = markup);
+}
+
+//  <!-------------------------- ❗️❗️❗️  pagination function ❗️❗️❗️------------------------------------->
+function getGroupOfCocktails() {
+  const groupOfCocktails = [...cocktail].splice((page - 1) * limit, limit);
+  return groupOfCocktails;
+}
+
+function pagination() {
+  let totalPages = Math.ceil(cocktail.length / limit);
+  for (let i = 0; i < totalPages; i++) {
+    if (totalPages === 1) {
+      return;
+    }
+    const liEl = `<li class="pagination__item">${i + 1}</li>`;
+    ulEl.insertAdjacentHTML(`beforeend`, liEl);
+  }
+  ulEl.firstElementChild.classList.add('pagination__item--active');
+  ulEl.addEventListener('click', changePage);
+}
+
+function changePage(event) {
+  if (event.target.tagName === `LI`) {
+    page = event.target.textContent;
+    const previousLi = ulEl.querySelector('.pagination__item--active');
+
+    if (previousLi) {
+      previousLi.classList.remove('pagination__item--active');
+      event.target.classList.add('pagination__item--active');
+    }
+
+    const groupOfCocktails = getGroupOfCocktails();
+    markupCard(groupOfCocktails);
+  }
 }

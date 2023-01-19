@@ -167,6 +167,7 @@
   font-size: 14px;
   line-height: 1.5;
   color: $secondary-text-color;
+  cursor: pointer;
 
   @media screen and (min-width: $desktop) {
     font-size: 24px;
@@ -174,7 +175,8 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: $primary-text-color;
     -webkit-text-stroke: 1px $secondary-text-color;
     text-shadow: 0px 4px 4px rgba(95, 103, 117, 0.25);

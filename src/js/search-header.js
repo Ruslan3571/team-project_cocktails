@@ -1,4 +1,3 @@
-import { searchCocktailByFirstLetter } from './ApiServise';
 import { searchCocktailByName } from './ApiServise';
 
 const cocktailsSection = document.querySelector('.cocktails');

@@ -24,7 +24,7 @@ async function renderFavoriteCock() {
 
     return;
   }
-  refsFavoriteSubtitle.classList.remove('hidden');
+  // refsFavoriteSubtitle.classList.remove('hidden');
 }
 
 function markupCard(card) {
@@ -40,7 +40,7 @@ function markupCard(card) {
       }
 
 
-      refsFavoriteTitle.classList.remove('hidden');
+      // refsFavoriteTitle.classList.remove('hidden');
 
       return `<li class="cocktails__card">
             <div class="cocktails__thumb">
